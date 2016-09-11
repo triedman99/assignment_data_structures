@@ -9,15 +9,16 @@ class Stack
   end
 
   def pop
-    return nil if @stack.empty?
+    return nil if empty?(@array)
     @array[@array.length - 1] = nil
+    peek
   end
 
   def peek
     return @array[@array.length - 1]
   end
 
-  def empty?
+  def empty?(array)
     return true if @array.length == 0
   end
 
